@@ -7,8 +7,9 @@ const getAudiosData = () => {
 
       if (audio) {
         const url = audio.src
-        const name = post.querySelector('[data-tag=post-title]')?.textContent
-
+        const name =
+          post.querySelector('[data-tag=post-title]').textContent +
+          `_${Date.now()}`
         return { url, name }
       }
     })
